@@ -1,0 +1,16 @@
+components:
+  - name: "frontend-530ceee7"
+    role: static
+    rootDirectory: "frontend-530ceee7"
+    output: "public"
+    path: "/"
+  - name: "backend-530ceee7"
+    role: web
+    platform: "python"
+    rootDirectory: "backend-530ceee7"
+    path: "/api"
+    run:
+      port: 8080
+      start: "python app.py"
+      healthCheckPath: "/api/health"
+      healthCheckStatusCodes: [200]
